@@ -50,52 +50,6 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2018-01-09T11:02:19.000Z"><a href="/2018/01/09/SDK-authentication-failure-for-CRM-v9/">01-09-2018</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2018/01/09/SDK-authentication-failure-for-CRM-v9/">SDK authentication failure for CRM v9</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>In CRM v9.0, when trying to pass the authentication via CRM SDK,  we find we are unable to retrieve the <em>OrganizationService</em>. As the screenshot, the <em>service</em> is null, the authentication hasn’t been passed.</p>
-<p><img src="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/SDK%20authentication%20failure%20for%20Potassium/SDK%20authentication%20failure%20for%20CRM%20v9_img1.png" alt="enter image description here"></p>
-<p>By checking the fiddler trace, we can find the TLS 1.0 was used for the connection.</p>
-<p><img src="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/SDK%20authentication%20failure%20for%20Potassium/SDK%20authentication%20failure%20for%20CRM%20v9_img2.png" alt="enter image description here"></p>
-<h4 id="Reason"><a href="#Reason" class="headerlink" title="Reason"></a>Reason</h4><p>Why this happens because .NET Framework 4.5.2 or less makes HTTP connections with TLS 1.0 while CRM 9.0 organizations are blocking those calls.<br>Refer to <a href="https://blogs.msdn.microsoft.com/crm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/" target="_blank" rel="noopener">https://blogs.msdn.microsoft.com/crm/2017/09/28/updates-coming-to-dynamics-365-customer-engagement-connection-security/</a></p>
-<h4 id="Resolution"><a href="#Resolution" class="headerlink" title="Resolution"></a>Resolution</h4><ul>
-<li><p><strong>Option 1:</strong></p>
-<p>  Upgrade the .NET Framework to 4.6.2 or higher</p>
-</li>
-<li><p><strong>Option 2:</strong></p>
-<p> Add below code before making the OAuth calls as I commented in the first image.</p>
-<p> <code>ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;</code></p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
         <time datetime="2018-01-07T09:40:43.857Z"><a href="/2018/01/07/hello-world/">01-07-2018</a></time>
       
       
@@ -148,15 +102,6 @@
   
 
   
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/CRM/">CRM</a><small>1</small></li>
-  
-  </ul>
-</div>
-
 </aside>
     <div class="clearfix"></div>
   </div>
