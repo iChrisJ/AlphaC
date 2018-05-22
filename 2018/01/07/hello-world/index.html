@@ -207,6 +207,29 @@ var themeMenus = {};
       
             
       
+        
+  <!-- Gitment START! Deploy by Z4HD -->
+	<div id="comments"></div>
+	<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+	<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+	<script>
+	var gitment = new Gitment({
+		id: 'http://alphac.cn/2018/01/07/hello-world/',
+		owner: 'ichrisj',
+		repo: 'ichrisj.github.io',
+		oauth: {
+			client_id: 'a92dbe4b9e2c37802bcd',
+			client_secret: '158d5e68d670bf214820459b3fa63f59f623b912',
+		},
+	})
+	gitment.render('comments')
+	</script>
+	<!-- Gitment 自定义样式表 -->
+	<link rel="stylesheet" href="/css/comment-gitment.css">
+	<!-- Gitment END! -->
+
+
+      
     </footer>
   </div>
   
