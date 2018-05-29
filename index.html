@@ -13,21 +13,21 @@
   <!-- PACE Progress Bar START -->
 
   
-  <title>Chris&#39; Turning Over</title>
+  <title>Turning Over</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
   <meta property="og:type" content="website">
-<meta property="og:title" content="Chris&#39; Turning Over">
+<meta property="og:title" content="Turning Over">
 <meta property="og:url" content="http://alphac.cn/index.html">
-<meta property="og:site_name" content="Chris&#39; Turning Over">
+<meta property="og:site_name" content="Turning Over">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chris&#39; Turning Over">
+<meta name="twitter:title" content="Turning Over">
   
-    <link rel="alternate" href="/atom.xml" title="Chris&#39; Turning Over" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Turning Over" type="application/atom+xml">
   
   <link rel="icon" href="/css/images/favicon.ico">
   
@@ -160,6 +160,63 @@ var themeMenus = {};
       <div id="content" class="outer">
         
           <section id="main">
+  
+    <article id="post-Value-missing-in-CRM-Portal-dropdown-list"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2018/05/29/Value-missing-in-CRM-Portal-dropdown-list/">Value missing in CRM Portal dropdown list</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2018/05/29/Value-missing-in-CRM-Portal-dropdown-list/" class="article-date">
+	  <time datetime="2018-05-29T14:29:57.000Z" itemprop="datePublished">May 29, 2018</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In CRM Portal, we are able to make a Lookup field on an entity form render as a dropdown list, just add an entity form metadata. For example, in an OOB CSS Portal, we add the <strong>Source Campaign (campaignid)</strong> lookup field to the <strong>contact us</strong> page <em>(an Lead entity form)</em>. In the <strong>contact us</strong> entity form, add an entity form metadata record for the <strong>Source Campaign (campaignid)</strong> and make sure the <em>Control Style</em> is <em>Render Lookup as Dropdown</em>.</p>
+<p><img src="..\images\Value-missing-in-CRM-Portal-dropdown-list\001.png" alt=""></p>
+<p>Then we can see the lookup field show as a dropdown list.</p>
+<p><img src="..\images\Value-missing-in-CRM-Portal-dropdown-list\002.png" alt=""></p>
+<p>However, after recent Portal release (about around v8.4.2.19), the values of the dropdown list don’t show, like an empty list. But if we change the dropdown back the lookup, the values show again in the pop up dialog.</p>
+<p><img src="..\images\Value-missing-in-CRM-Portal-dropdown-list\003.png" alt=""></p>
+<p>This is because there is a design change (should be a security enhancement), we need to provide additional <strong>Append</strong> permission for the Lookup field related entity.</p>
+<p>For above example, as the <strong>Source Campaign (campaignid)</strong> is a Lead entity attribute and contains the relationship between Lead entity and Campaign entity. So please go to CRM &gt; Portals &gt; Entity Permissions, create a new entity permission record, </p>
+<p>Name: <em>“any name you like”</em>; Entity Name: <em>campaign</em>; Website: <em>“the portal website”</em>; Scope: <em>Global</em>;</p>
+<p><strong><em>Privileges</em></strong> section, make sure the <strong>Append</strong> is checked.</p>
+<p>Scroll down to the <em>Web Roles</em> section, you can add the web roles you want this kind of Portal users able to see the values in the dropdown list. Here I choose <strong>Anonymous Users</strong>, as <strong>contact us</strong> page can be accessed anonymously. PS: if we only choose <strong>Anonymous Users</strong> web role, after we sign in the portal, we are unable to see the values in the dropdown.</p>
+<p><img src="..\images\Value-missing-in-CRM-Portal-dropdown-list\004.png" alt=""></p>
+<p>Then, save the record, clear portal cache, we can see the values in the dropdown list show again. Cheers!!</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CRM-Portal/">CRM Portal</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
   
     <article id="post-hello-world"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
@@ -302,6 +359,18 @@ var themeMenus = {};
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2018/05/29/Value-missing-in-CRM-Portal-dropdown-list/">Value missing in CRM Portal dropdown list</a></h6>
+              <span>May 29, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2018/01/07/hello-world/">Hello World</a></h6>
               <span>January 7, 2018</span>
             </div>
@@ -317,16 +386,30 @@ var themeMenus = {};
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CRM-Portal/">CRM Portal</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CRM-Portal/" style="font-size: 10px;">CRM Portal</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -340,7 +423,7 @@ var themeMenus = {};
 
   <div class="clearfix container">
       <div class="site-info">
-	      &copy; 2018 Chris&#39; Turning Over All Rights Reserved.
+	      &copy; 2018 Turning Over All Rights Reserved.
           
             <span id="busuanzi_container_site_uv">
               本站访客数<span id="busuanzi_value_site_uv"></span>人次  
