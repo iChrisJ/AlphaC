@@ -29,15 +29,15 @@
 <meta property="og:site_name" content="Turning Over">
 <meta property="og:description" content="In CRM Portal, we are able to make a Lookup field on an entity form render as a dropdown list, just add an entity form metadata. For example, in an OOB CSS Portal, we add the Source Campaign (campaign">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://alphac.cn/2018/05/29/images/Value-missing-in-CRM-Portal-dropdown-list/001.png">
-<meta property="og:image" content="http://alphac.cn/2018/05/29/images/Value-missing-in-CRM-Portal-dropdown-list/002.png">
-<meta property="og:image" content="http://alphac.cn/2018/05/29/images/Value-missing-in-CRM-Portal-dropdown-list/003.png">
-<meta property="og:image" content="http://alphac.cn/2018/05/29/images/Value-missing-in-CRM-Portal-dropdown-list/004.png">
-<meta property="og:updated_time" content="2018-05-29T16:28:05.084Z">
+<meta property="og:image" content="https://github.com/iChrisJ/ichrisj.github.io/blob/master/images/Value-missing-in-CRM-Portal-dropdown-list/001.png?raw=true">
+<meta property="og:image" content="https://github.com/iChrisJ/ichrisj.github.io/blob/master/images/Value-missing-in-CRM-Portal-dropdown-list/002.png?raw=true">
+<meta property="og:image" content="https://github.com/iChrisJ/ichrisj.github.io/blob/master/images/Value-missing-in-CRM-Portal-dropdown-list/003.png?raw=true">
+<meta property="og:image" content="https://github.com/iChrisJ/ichrisj.github.io/blob/master/images/Value-missing-in-CRM-Portal-dropdown-list/004.png?raw=true">
+<meta property="og:updated_time" content="2018-05-30T01:59:45.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Value missing in CRM Portal dropdown list">
 <meta name="twitter:description" content="In CRM Portal, we are able to make a Lookup field on an entity form render as a dropdown list, just add an entity form metadata. For example, in an OOB CSS Portal, we add the Source Campaign (campaign">
-<meta name="twitter:image" content="http://alphac.cn/2018/05/29/images/Value-missing-in-CRM-Portal-dropdown-list/001.png">
+<meta name="twitter:image" content="https://github.com/iChrisJ/ichrisj.github.io/blob/master/images/Value-missing-in-CRM-Portal-dropdown-list/001.png?raw=true">
   
     <link rel="alternate" href="/atom.xml" title="Turning Over" type="application/atom+xml">
   
@@ -200,17 +200,17 @@ var themeMenus = {};
     <div class="article-entry" itemprop="articleBody">
       
         <p>In CRM Portal, we are able to make a Lookup field on an entity form render as a dropdown list, just add an entity form metadata. For example, in an OOB CSS Portal, we add the <strong>Source Campaign (campaignid)</strong> lookup field to the <strong>contact us</strong> page <em>(an Lead entity form)</em>. In the <strong>contact us</strong> entity form, add an entity form metadata record for the <strong>Source Campaign (campaignid)</strong> and make sure the <em>Control Style</em> is <em>Render Lookup as Dropdown</em>.</p>
-<p><img src="..\images\Value-missing-in-CRM-Portal-dropdown-list\001.png" alt=""></p>
+<p><img src="https://github.com/iChrisJ/ichrisj.github.io/blob/master/images/Value-missing-in-CRM-Portal-dropdown-list/001.png?raw=true" alt=""></p>
 <p>Then we can see the lookup field show as a dropdown list.</p>
-<p><img src="..\images\Value-missing-in-CRM-Portal-dropdown-list\002.png" alt=""></p>
+<p><img src="https://github.com/iChrisJ/ichrisj.github.io/blob/master/images/Value-missing-in-CRM-Portal-dropdown-list/002.png?raw=true" alt=""></p>
 <p>However, after recent Portal release (about around v8.4.2.19), the values of the dropdown list don’t show, like an empty list. But if we change the dropdown back the lookup, the values show again in the pop up dialog.</p>
-<p><img src="..\images\Value-missing-in-CRM-Portal-dropdown-list\003.png" alt=""></p>
+<p><img src="https://github.com/iChrisJ/ichrisj.github.io/blob/master/images/Value-missing-in-CRM-Portal-dropdown-list/003.png?raw=true" alt=""></p>
 <p>This is because there is a design change (should be a security enhancement), we need to provide additional <strong>Append</strong> permission for the Lookup field related entity.</p>
 <p>For above example, as the <strong>Source Campaign (campaignid)</strong> is a Lead entity attribute and contains the relationship between Lead entity and Campaign entity. So please go to CRM &gt; Portals &gt; Entity Permissions, create a new entity permission record, </p>
 <p>Name: <em>“any name you like”</em>; Entity Name: <em>campaign</em>; Website: <em>“the portal website”</em>; Scope: <em>Global</em>;</p>
 <p><strong><em>Privileges</em></strong> section, make sure the <strong>Append</strong> is checked.</p>
 <p>Scroll down to the <em>Web Roles</em> section, you can add the web roles you want this kind of Portal users able to see the values in the dropdown list. Here I choose <strong>Anonymous Users</strong>, as <strong>contact us</strong> page can be accessed anonymously. PS: if we only choose <strong>Anonymous Users</strong> web role, after we sign in the portal, we are unable to see the values in the dropdown.</p>
-<p><img src="..\images\Value-missing-in-CRM-Portal-dropdown-list\004.png" alt=""></p>
+<p><img src="https://github.com/iChrisJ/ichrisj.github.io/blob/master/images/Value-missing-in-CRM-Portal-dropdown-list/004.png?raw=true" alt=""></p>
 <p>Then, save the record, clear portal cache, we can see the values in the dropdown list show again. Cheers!!</p>
 
       
