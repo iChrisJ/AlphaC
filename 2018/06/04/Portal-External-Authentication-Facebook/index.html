@@ -29,18 +29,18 @@
 <meta property="og:site_name" content="Turning Over">
 <meta property="og:description" content="In CRM Portal, you are able to register it with your personal email address, then you are able to sign in the Portal internally. Actually, you don’t need to register Portal with email address if the P">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="d:/GitHub/alphac/source/images/Portal-External-Authentication-Facebook/001.jpg">
-<meta property="og:image" content="d:/GitHub/alphac/source/images/Portal-External-Authentication-Facebook/002.jpg">
-<meta property="og:image" content="d:/GitHub/alphac/source/images/Portal-External-Authentication-Facebook/003.jpg">
-<meta property="og:image" content="d:/GitHub/alphac/source/images/Portal-External-Authentication-Facebook/004.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/001.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/002.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/003.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/004.jpg">
 <meta property="og:image" content="d:/GitHub/alphac/source/images/Portal-External-Authentication-Facebook/005.jpg">
-<meta property="og:image" content="d:/GitHub/alphac/source/images/Portal-External-Authentication-Facebook/006.jpg">
-<meta property="og:image" content="d:/GitHub/alphac/source/images/Portal-External-Authentication-Facebook/007.jpg">
-<meta property="og:updated_time" content="2018-06-04T09:25:29.464Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/006.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/007.jpg">
+<meta property="og:updated_time" content="2018-06-04T09:32:47.352Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Portal External Authentication - Facebook">
 <meta name="twitter:description" content="In CRM Portal, you are able to register it with your personal email address, then you are able to sign in the Portal internally. Actually, you don’t need to register Portal with email address if the P">
-<meta name="twitter:image" content="d:/GitHub/alphac/source/images/Portal-External-Authentication-Facebook/001.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/001.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Turning Over" type="application/atom+xml">
   
@@ -206,30 +206,30 @@ var themeMenus = {};
 <p>Here I will introduce how to enable these external authentication in CRM Portal. Facebook first.</p>
 <ol>
 <li><p>Log on your Facebook and go to <a href="https://developers.facebook.com" target="_blank" rel="noopener">https://developers.facebook.com</a> to create an new App. Fill out the “Display Name” and “Contact Email” and Create App ID.</p>
-<p><img src="D:\GitHub\alphac\source\images\Portal-External-Authentication-Facebook\001.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/001.jpg" alt=""></p>
 </li>
 <li><p>After click “Create App ID”, you may receive a “Security Check” dialog, type the code.</p>
 </li>
 <li><p>In the following “Add a Product” page, select “Facebook Login” tile as we will use Facebook account to log on Portal.</p>
-<p><img src="D:\GitHub\alphac\source\images\Portal-External-Authentication-Facebook\002.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/002.jpg" alt=""></p>
 </li>
 <li><p>Afterwards, click <strong>Settings -&gt; Basic</strong> on the left panel, then fill out the “Privacy Policy URL” and select one “category”.</p>
 <p>On the bottom, click “Add Platform”, choose the “Website” and type your Portal URL in it. Then Save changes.</p>
 <p>Make a note of the “App ID” and “App Secret”, we will use them later.</p>
 <p>PS: For the “Privacy Policy URL”, we can google it and apply some free Private Policy, eg: from <a href="https://termsfeed.com/" target="_blank" rel="noopener">https://termsfeed.com/</a>  or <a href="https://www.freeprivacypolicy.com" target="_blank" rel="noopener">https://www.freeprivacypolicy.com</a></p>
 <p><a href="https://www.youtube.com/watch?v=BIrC8ke_JWw&amp;feature=youtu.be" target="_blank" rel="noopener">https://www.youtube.com/watch?v=BIrC8ke_JWw&amp;feature=youtu.be</a> </p>
-<p><img src="D:\GitHub\alphac\source\images\Portal-External-Authentication-Facebook\003.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/003.jpg" alt=""></p>
 </li>
 <li><p>Navigate to <strong>Facebook Login -&gt; Settings</strong>, fill out the “Valid OAuth Redirect URLs” as https://<portalurl>/signin-facebook. Then Save the changes.</portalurl></p>
-<p><img src="D:\GitHub\alphac\source\images\Portal-External-Authentication-Facebook\004.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/004.jpg" alt=""></p>
 </li>
 <li><p>Then go to <strong>App Reviews</strong>, make this app public.<img src="D:\GitHub\alphac\source\images\Portal-External-Authentication-Facebook\005.jpg" alt=""></p>
 </li>
 <li><p>Go to the Portal associated CRM organization, navigate to <strong>Portals -&gt; Site Settings</strong>,  fill out the Site Settings “<em>Authentication/OpenAuth/Facebook/AppId</em>“ and “<em>Authentication/OpenAuth/Facebook/AppSecret</em>“ with the “App ID” and “App Secret” we have noted before. </p>
-<p><img src="D:\GitHub\alphac\source\images\Portal-External-Authentication-Facebook\006.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/006.jpg" alt=""></p>
 <ol>
 <li><p>Go to the Portal sign in page, we can see the “Facebook” button appears. Now you can sign in with your Facebook account. Cheers!!</p>
-<p><img src="D:\GitHub\alphac\source\images\Portal-External-Authentication-Facebook\007.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/iChrisJ/ichrisj.github.io/master/images/Portal-External-Authentication-Facebook/007.jpg" alt=""></p>
 </li>
 </ol>
 </li>
